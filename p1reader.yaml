@@ -11,7 +11,8 @@ esphome:
 
 esp8266:
 #  board: nodemcu
-  board: d1_mini_pro
+#  board: d1_mini_pro
+  board: esp12e
   restore_from_flash: true
 
 external_components:
@@ -53,7 +54,10 @@ ota:
 uart:
   id: uart_bus
   tx_pin: TX
-  rx_pin: RX
+#  rx_pin: RX
+  rx_pin:
+    number: GPIO3
+    inverted: true
   baud_rate: 115200
   rx_buffer_size: 3072    # UART Buffer size controls polling frequency
 
