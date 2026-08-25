@@ -9,11 +9,21 @@ esphome:
     name: p1reader.esp-p1reader-component
     version: "1.0"
 
-esp8266:
+#esp8266:
 #  board: nodemcu
 #  board: d1_mini_pro
-  board: esp12e
-  restore_from_flash: true
+#  board: esp12e
+#  restore_from_flash: true
+
+esp32:
+  variant: esp32
+  board: esp32dev
+  framework:
+    type: "${device_framework_type}"
+    advanced:
+      minimum_chip_revision: "3.1"
+      sram1_as_iram: true
+
 
 external_components:
   - source:
