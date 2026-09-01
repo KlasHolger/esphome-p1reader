@@ -47,8 +47,9 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: !secret encryption_key
-    
+#    key: !secret encryption_key
+    reboot_timeout: 5min
+
 ota:
   password: !secret ota_password
   platform: esphome
