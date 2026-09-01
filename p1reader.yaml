@@ -42,13 +42,13 @@ logger:
 #  level: INFO  # Logging costs performnce, swithc to DEBUG when needed
   level: DEBUG  # Logging costs performnce, swithc to DEBUG when needed
   baud_rate: 0 # disable logging over uart (would use up a HW uart)
-  esp8266_store_log_strings_in_flash: false # Avoid flash wear and tear
+#  esp8266_store_log_strings_in_flash: false # Avoid flash wear and tear
   
 # Enable Home Assistant API
 api:
   encryption:
 #    key: !secret encryption_key
-    reboot_timeout: 5min
+  reboot_timeout: 5min
 
 ota:
   password: !secret ota_password
@@ -58,7 +58,7 @@ uart:
   id: uart_bus
   tx_pin: GPIO17
   rx_pin:
-    number: GPI16
+    number: GPIo16
     inverted: true
   baud_rate: 115200
   rx_buffer_size: 3072    # UART Buffer size controls polling frequency
